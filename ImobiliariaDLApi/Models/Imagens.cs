@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ImobiliariaDL.Models
+namespace ImobiliariaDLApi.Models
 {
     public class Imagem
     {
