@@ -10,16 +10,16 @@ namespace ImobiliariaDLApi.Controllers
 
     public class ImoveisController : ControllerBase
     {
-        private readonly IImoveisRepository _ouw;
-        public ImoveisController(IImoveisRepository ouw)
+        private readonly IUnitOfWork _ouw;
+        public ImoveisController(IUnitOfWork ouw)
         {
             _ouw = ouw;
         }
 
-        [HttpGet("teste1")]
+        [HttpGet("imoveis")]
         public ActionResult<IEnumerable<Imovel>> GetImoveis()
         {
-            var imoveis = _ouw.Get();
+            var imoveis = _ouw.Imoveis.Get();
             return Ok(imoveis);
         }
     }

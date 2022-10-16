@@ -1,8 +1,9 @@
 ﻿namespace ImobiliariaDLApi.Repository
 {
-    public class IUnitOfWork
+    public interface IUnitOfWork
     {
-        public IImoveisRepository Imoveis { get; set; }
-        
+        public IImoveisRepository Imoveis { get; }
+        public IImagemRepository Imagens { get; }
+        public Task Commit();
     }
 }

@@ -14,7 +14,7 @@ builder.Services.AddDbContext<ImobiliariaDLDbContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IImoveisRepository, ImoveisRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
