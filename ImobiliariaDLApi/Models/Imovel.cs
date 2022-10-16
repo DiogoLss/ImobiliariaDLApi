@@ -28,5 +28,18 @@ namespace ImobiliariaDLApi.Models
         [Required]
         public bool ECondominioOuApartamento { get; set; }
         public int? NumeroDoApCd { get; set; }
+
+        //ENDERECO
+
+        public string Cidade { get; set; }
+        [Required(ErrorMessage = "Informe o bairro do imóvel")]
+        public string? Bairro { get; set; }
+        [Required(ErrorMessage = "Informe a rua do imóvel}")]
+        public string? Rua { get; set; }
+        [Required(ErrorMessage = "Informe o número do imóvel}")]
+        public int? Numero { get; set; }
+        [Required]
+        [StringLength(16)]
+        public string CEP { get; set; }
     }
 }
